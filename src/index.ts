@@ -102,8 +102,8 @@ class MockDataGenerator {
             if (Math.random() > 0.15) {
                 this.contractsById.forEach(ctr => {
                     const shouldSendQuotes = this.pristineContracts.has(ctr.id)
-                        ? Math.random() > 0.85//lower probability to send large chunk of initial quotes
-                        : Math.random() > 0.25;
+                        ? Math.random() > 0.95//lower probability to send large chunk of initial quotes
+                        : Math.random() > 0.35;
                     if (shouldSendQuotes) {
                         const quoteCount = this.pristineContracts.has(ctr.id)
                             ? 50 + Math.round(Math.random() * 400)
